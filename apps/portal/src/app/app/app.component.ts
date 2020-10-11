@@ -27,6 +27,7 @@ import {
   animations: [routeAnimations]
 })
 export class AppComponent implements OnInit {
+  // showFiller = false;
   isProd = env.production;
   envName = env.envName;
   version = env.versions.app;
