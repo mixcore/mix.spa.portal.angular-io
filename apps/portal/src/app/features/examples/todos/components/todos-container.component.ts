@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { select, Store } from '@ngrx/store';
 import { take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { v4 as uuid } from 'uuid';
 
 import {
   ROUTE_ANIMATIONS_ELEMENTS,

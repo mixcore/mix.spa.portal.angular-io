@@ -4,8 +4,13 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./features/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   {
     path: 'about',
@@ -26,16 +31,16 @@ const routes: Routes = [
         (m) => m.SettingsModule
       )
   },
-  // {
-  //   path: 'examples',
-  //   loadChildren: () =>
-  //     import('./features/examples/examples.module').then(
-  //       (m) => m.ExamplesModule
-  //     )
-  // },
+  {
+    path: 'examples',
+    loadChildren: () =>
+      import('./features/examples/examples.module').then(
+        (m) => m.ExamplesModule
+      )
+  },
   {
     path: '**',
-    redirectTo: 'about'
+    redirectTo: 'dashboard'
   }
 ];
 

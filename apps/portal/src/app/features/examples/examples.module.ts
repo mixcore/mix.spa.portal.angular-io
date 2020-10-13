@@ -6,7 +6,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { SharedModule } from '../../shared/shared.module';
+// import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '@mixcore/shared';
 import { environment } from '../../../environments/environment';
 
 import { FEATURE_NAME, reducers } from './examples.state';
