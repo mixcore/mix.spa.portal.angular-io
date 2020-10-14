@@ -10,31 +10,31 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./features/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      import('./pages/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   {
     path: 'about',
     loadChildren: () =>
-      import('./features/about/about.module').then((m) => m.AboutModule)
+      import('./pages/about/about.module').then((m) => m.AboutModule)
   },
   {
     path: 'feature-list',
     loadChildren: () =>
-      import('./features/feature-list/feature-list.module').then(
+      import('./pages/feature-list/feature-list.module').then(
         (m) => m.FeatureListModule
       )
   },
   {
     path: 'settings',
     loadChildren: () =>
-      import('./features/settings/settings.module').then(
+      import('./pages/settings/settings.module').then(
         (m) => m.SettingsModule
       )
   },
   {
     path: 'examples',
     loadChildren: () =>
-      import('./features/examples/examples.module').then(
+      import('./pages/examples/examples.module').then(
         (m) => m.ExamplesModule
       )
   },

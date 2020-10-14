@@ -14,11 +14,11 @@ import {
   selectSettingsStickyHeader,
   selectSettingsLanguage,
   selectEffectiveTheme
-} from '../core/core.module';
+} from '@mixcore/core';
 import {
   actionSettingsChangeAnimationsPageDisabled,
   actionSettingsChangeLanguage
-} from '../core/settings/settings.actions';
+} from '@mixcore/core/settings/settings.actions';
 
 @Component({
   selector: 'mixcore-root',

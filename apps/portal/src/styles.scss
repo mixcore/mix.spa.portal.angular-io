@@ -17,13 +17,13 @@
 @import './app/app/app.component.scss-theme';
 // @import './app/shared/big-input/big-input/big-input.component.scss-theme';
 @import '../../../libs/shared/src/lib/big-input/big-input/big-input.component.scss-theme.scss';
-@import './app/features/about/about/about.component.scss-theme';
-@import './app/features/examples/notifications/components/notifications.component.scss-theme';
-@import './app/features/examples/todos/components/todos-container.component.scss-theme';
-@import './app/features/examples/stock-market/components/stock-market-container.component.scss-theme';
-@import './app/features/examples/theming/parent/parent.component.scss-theme';
-@import './app/features/examples/theming/child/child.component.scss-theme';
-@import './app/features/examples/examples/examples.component.scss-theme';
+@import './app/pages/about/about/about.component.scss-theme';
+@import './app/pages/examples/notifications/components/notifications.component.scss-theme';
+@import './app/pages/examples/todos/components/todos-container.component.scss-theme';
+@import './app/pages/examples/stock-market/components/stock-market-container.component.scss-theme';
+@import './app/pages/examples/theming/parent/parent.component.scss-theme';
+@import './app/pages/examples/theming/child/child.component.scss-theme';
+@import './app/pages/examples/examples/examples.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include mixcore-styles-reset-theme($theme);
