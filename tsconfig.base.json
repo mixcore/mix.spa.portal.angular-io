@@ -20,7 +20,8 @@
       "@mixcore/shared/*": ["libs/shared/src/lib/*"],
       "@mixcore/shared/scss": ["libs/shared/scss/styles.scss"],
       "@mixcore/core": ["libs/core/src/index.ts"],
-      "@mixcore/core/*": ["libs/core/src/lib/*"]
+      "@mixcore/core/*": ["libs/core/src/lib/*"],
+      "@mixcore/components": ["libs/components/src/index.ts"]
     }
   },
   "angularCompilerOptions": {

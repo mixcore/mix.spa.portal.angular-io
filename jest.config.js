@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/mix-heart',
     '<rootDir>/libs/shared',
     '<rootDir>/libs/core',
+    '<rootDir>/libs/components',
   ],
 };

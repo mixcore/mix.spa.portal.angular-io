@@ -22,7 +22,7 @@
             "tsConfig": "apps/portal/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/portal/src/favicon.ico", 
+              "apps/portal/src/favicon.ico",
               "apps/portal/src/assets",
               {
                 "glob": "**/*",
@@ -35,9 +35,7 @@
               "apps/portal/src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared/scss"
-              ]
+              "includePaths": ["libs/shared/scss"]
             },
             "scripts": []
           },
@@ -427,6 +425,36 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "components": {
+      "projectType": "library",
+      "root": "libs/components",
+      "sourceRoot": "libs/components/src",
+      "prefix": "mixcore",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/components/tsconfig.lib.json",
+              "libs/components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/components/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/components/jest.config.js",
             "passWithNoTests": true
           }
         }
