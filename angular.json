@@ -26,7 +26,7 @@
               "apps/portal/src/assets",
               {
                 "glob": "**/*",
-                "input": "./libs/assets",
+                "input": "./libs/shared/assets",
                 "output": "./assets"
               }
             ],
@@ -34,6 +34,11 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/portal/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared/scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

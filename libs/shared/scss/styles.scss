@@ -1,0 +1,5 @@
+.background {
+  &::before {
+    background: url('./assets/intro.jpg') no-repeat center top;
+  }
+}

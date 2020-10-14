@@ -18,9 +18,9 @@
     "paths": {
       "@mixcore/shared": ["libs/shared/src/index.ts"],
       "@mixcore/shared/*": ["libs/shared/src/lib/*"],
+      "@mixcore/shared/scss": ["libs/shared/scss/styles.scss"],
       "@mixcore/core": ["libs/core/src/index.ts"],
-      "@mixcore/core/*": ["libs/core/src/lib/*"],
-      "@mixcore/assets/*": ["libs/assets/*"]
+      "@mixcore/core/*": ["libs/core/src/lib/*"]
     }
   },
   "angularCompilerOptions": {
