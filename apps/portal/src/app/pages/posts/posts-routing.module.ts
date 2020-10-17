@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AttributeSetComponent } from './components/attribute-set/attribute-set.component';
+// import { DatabasesComponent } from './components/databases/databases.component';
+import { PostsComponent } from './components/posts/posts.component';
 import { MediasComponent } from './components/medias/medias.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { MainComponent } from './components/main/main.component';
@@ -9,16 +10,22 @@ import { PostContentComponent } from './components/post-content/post-content.com
 import { ParentsComponent } from './components/parents/parents.component';
 import { PostAdvancedComponent } from './components/post-advanced/post-advanced.component';
 
-const routes: Routes = [];
-
+const MediasComponentroutes: Routes = [
+  {
+    path: '',
+    component: PostsComponent,
+    data: { title: 'mixcore.menu.about' }
+  }
+];
 @NgModule({
-  imports: [RouterModule.forChild(, MediasComponentroutes,
-  declarations: [MainComponent],
-  declarations: [SeoComponent],
-  declarations: [PostContentComponent],
-  declarations: [ParentsComponent],
-  declarations: [PostAdvancedComponent])],
-  exports: [RouterModule],
-  declarations: [AttributeSetComponent, ModulesComponent]
+  imports: [
+    RouterModule.forChild(MediasComponentroutes)//,
+    // MainComponent,
+    // SeoComponent,
+    // PostContentComponent,
+    // ParentsComponent,
+    // PostAdvancedComponent
+  ],
+  exports: [RouterModule]
 })
 export class PostsRoutingModule { }
