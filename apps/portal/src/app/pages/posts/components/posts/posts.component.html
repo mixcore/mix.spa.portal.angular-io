@@ -1,6 +1,38 @@
 <div class="box" cdkDrag>Drag me around!</div>
 
-<div class="container">
+<div class="container-fluid">
+  <form class="example-form">
+    <div class="row">
+      <div class="col-2">
+        <mat-form-field appearance="legacy">
+          <mat-label>From</mat-label>
+          <input matInput [matDatepicker]="frompicker">
+          <mat-datepicker-toggle matSuffix [for]="frompicker"></mat-datepicker-toggle>
+          <mat-datepicker #frompicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-2">
+        <mat-form-field appearance="legacy">
+          <mat-label>To</mat-label>
+          <input matInput [matDatepicker]="topicker">
+          <mat-datepicker-toggle matSuffix [for]="topicker"></mat-datepicker-toggle>
+          <mat-datepicker #topicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-2">
+        <mat-form-field appearance="legacy">
+          <mat-label>Search</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <button mat-button color="primary" id="actionBtn" class="mat-focus-indicator col-3 information mat-raised-button mat-button-base">Primary</button>
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    
+  </div>
   <div class="row">
     <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let movie of movies" cdkDrag>
@@ -9,7 +41,7 @@
       </div>
     </div> -->
     <div class="col-12">
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" cdkDropList #table1 #list1="cdkDropList"
+      <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" cdkDropList #table1 #list1="cdkDropList"
         [cdkDropListData]="dataSource.data" (cdkDropListDropped)="drop($event)"
         id="table1">
 
@@ -18,32 +50,32 @@
 
         <!-- Position Column -->
         <ng-container matColumnDef="position">
-          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
         </ng-container>
 
         <!-- Name Column -->
         <ng-container matColumnDef="name">
-          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
         </ng-container>
 
         <!-- Weight Column -->
         <ng-container matColumnDef="weight">
-          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Weight </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
         </ng-container>
 
         <!-- Symbol Column -->
         <ng-container matColumnDef="symbol">
-          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;" cdkDrag></mat-row>
-      </table>
-      <mat-paginator [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons></mat-paginator>
+      </mat-table>
+      <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
 
     </div>
   </div>
