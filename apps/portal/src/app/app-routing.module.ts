@@ -4,16 +4,16 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'portal/dashboard',
     pathMatch: 'full'
   },
   {
-    path: 'dashboard',
+    path: 'portal/dashboard',
     loadChildren: () =>
       import('./pages/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   {
-      path: 'posts',
+      path: 'portal/posts',
       loadChildren: () =>
         import('./pages/posts/posts.module').then((m) => m.PostsModule)
     },
@@ -232,7 +232,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'portal/dashboard'
   }
 ];
 

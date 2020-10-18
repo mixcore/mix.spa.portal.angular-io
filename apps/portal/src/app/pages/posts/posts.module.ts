@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '@mixcore/shared';
 
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './components/posts/posts.component';
@@ -9,6 +10,7 @@ import { PostsComponent } from './components/posts/posts.component';
   declarations: [PostsComponent],
   imports: [
     CommonModule,
+    SharedModule,
     PostsRoutingModule
   ]
 })

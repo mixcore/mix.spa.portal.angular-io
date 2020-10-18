@@ -35,8 +35,8 @@ export class AppComponent implements OnInit {
   logo = require('../../assets/logo.png').default;
   languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn', 'he'];
   navigation = [
-    { link: 'dashboard', label: 'mixcore.menu.dashboard' },
-    { link: 'posts', label: 'mixcore.menu.posts' },
+    { link: 'portal/dashboard', label: 'mixcore.menu.dashboard' },
+    { link: 'portal/posts', label: 'mixcore.menu.posts' },
     { link: 'pages', label: 'mixcore.menu.pages' },
     { link: 'modules', label: 'mixcore.menu.modules' },
     { link: 'databases', label: 'mixcore.menu.databases' },

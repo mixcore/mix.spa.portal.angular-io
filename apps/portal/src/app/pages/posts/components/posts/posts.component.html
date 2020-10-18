@@ -1,9 +1,50 @@
+<div class="box" cdkDrag>Drag me around!</div>
+
 <div class="container">
-    <div class="row">
-        <mat-list>
-            <mat-list-item> Pepper </mat-list-item>
-            <mat-list-item> Salt </mat-list-item>
-            <mat-list-item> Paprika </mat-list-item>
-           </mat-list>
+  <div class="row">
+    <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        {{movie}}
+      </div>
+    </div> -->
+    <div class="col-12">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" cdkDropList #table1 #list1="cdkDropList"
+        [cdkDropListData]="dataSource.data" (cdkDropListDropped)="drop($event)"
+        id="table1">
+
+        <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" cdkDrag></mat-row>
+      </table>
+      <mat-paginator [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons></mat-paginator>
+
     </div>
+  </div>
 </div>
