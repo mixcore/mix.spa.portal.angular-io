@@ -33,6 +33,8 @@
   "mixcore.header.github": "Project Github Repository",
   "mixcore.menu.dashboard": "Dashboard",
   "mixcore.menu.posts": "Posts",
+  "mixcore.portal.posts.list": "List Post",
+  "mixcore.portal.posts.create": "Create Post",
   "mixcore.menu.pages": "Pages",
   "mixcore.menu.modules": "Modules",
   "mixcore.menu.databases": "Databases",

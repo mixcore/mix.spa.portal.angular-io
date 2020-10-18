@@ -1,4 +1,12 @@
-<div class="box" cdkDrag>Drag me around!</div>
+<nav mat-tab-nav-bar class="d-none d-sm-flex">
+  <a mat-tab-link
+     *ngFor="let e of subNav"
+     [routerLink]="e.link"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive"
+     [disabled]="e.auth && !(isAuthenticated$ | async)"> <fa-icon icon="{{e.icon}}" class="{{e.icon}}"></fa-icon>&nbsp;{{e.label | translate}}
+  </a>
+</nav>
 
 <div class="container-fluid">
   <form class="example-form">

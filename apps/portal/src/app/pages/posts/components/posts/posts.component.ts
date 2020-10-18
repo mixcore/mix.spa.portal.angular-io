@@ -3,6 +3,13 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+
+import {
+  routeAnimations,
+  selectIsAuthenticated
+} from '@mixcore/core';
 
 export interface PeriodicElement {
   name: string;
@@ -23,20 +30,29 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 10, name: "Neon", weight: 20.1797, symbol: "Ne" }
 ];
 
+
 @Component({
   selector: 'mixcore-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
+  isAuthenticated$: Observable<boolean>;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() { }
+  
+  subNav = [
+    { link: '/portal/posts', label: 'mixcore.portal.posts.list', icon: 'posts' },
+    { link: '/portal/posts/create', label: 'mixcore.portal.posts.create', icon: 'plus' }
+  ];
+
+  constructor() {}
 
   ngOnInit(): void {
+    // this.isAuthenticated$ = this.store.pipe(select(selectIsAuthenticated));
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
