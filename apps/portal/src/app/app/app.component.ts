@@ -35,18 +35,18 @@ export class AppComponent implements OnInit {
   logo = require('../../assets/logo.png').default;
   languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn', 'he'];
   navigation = [
-    { link: 'portal/dashboard', label: 'mixcore.menu.dashboard' },
-    { link: 'portal/posts', label: 'mixcore.menu.posts' },
-    { link: 'pages', label: 'mixcore.menu.pages' },
-    { link: 'modules', label: 'mixcore.menu.modules' },
-    { link: 'databases', label: 'mixcore.menu.databases' },
-    { link: 'about', label: 'mixcore.menu.about' },
-    { link: 'feature-list', label: 'mixcore.menu.features' },
-    { link: 'examples', label: 'mixcore.menu.examples' }
+    { link: 'portal/dashboard', label: 'mixcore.menu.dashboard', icon: "dashboard" },
+    { link: 'portal/posts', label: 'mixcore.menu.posts', icon: "create" },
+    { link: 'pages', label: 'mixcore.menu.pages', icon: "article" },
+    { link: 'modules', label: 'mixcore.menu.modules', icon: "developer_board" },
+    { link: 'databases', label: 'mixcore.menu.databases', icon: "storage" },
+    // { link: 'about', label: 'mixcore.menu.about', icon: "dashboard" },
+    // { link: 'feature-list', label: 'mixcore.menu.features', icon: "dashboard" },
+    { link: 'examples', label: 'mixcore.menu.examples', icon: "dashboard" }
   ];
   navigationSideMenu = [
     ...this.navigation,
-    { link: 'settings', label: 'mixcore.menu.settings' }
+    { link: 'settings', label: 'mixcore.menu.settings', icon: "settings" }
   ];
 
   isAuthenticated$: Observable<boolean>;

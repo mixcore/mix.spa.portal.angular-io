@@ -45,8 +45,8 @@ export class PostsComponent implements OnInit {
 
   
   subNav = [
-    { link: '/portal/posts', label: 'mixcore.portal.posts.list', icon: 'posts' },
-    { link: '/portal/posts/create', label: 'mixcore.portal.posts.create', icon: 'plus' }
+    { link: '/portal/posts', label: 'mixcore.portal.posts.list', icon: 'view_list' },
+    { link: '/portal/posts/create', label: 'mixcore.portal.posts.create', icon: 'edit' }
   ];
 
   constructor() {}

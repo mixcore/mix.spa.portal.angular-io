@@ -4,11 +4,11 @@
      [routerLink]="e.link"
      routerLinkActive #rla="routerLinkActive"
      [active]="rla.isActive"
-     [disabled]="e.auth && !(isAuthenticated$ | async)"> <fa-icon icon="{{e.icon}}" class="{{e.icon}}"></fa-icon>&nbsp;{{e.label | translate}}
+     [disabled]="e.auth && !(isAuthenticated$ | async)"> <mat-icon>{{e.icon}}</mat-icon>&nbsp;{{e.label | translate}}
   </a>
 </nav>
 
-<div class="container-fluid">
+<div class="container">
   <form class="example-form">
     <div class="row">
       <div class="col-2">

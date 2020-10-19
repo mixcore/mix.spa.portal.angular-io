@@ -1,5 +1,5 @@
-$mixcore-primary: mat-palette($mat-blue-grey, 800, 300, 900);
+$mixcore-primary: mat-palette($mat-grey, 0, 0, 0);//mat-palette($mat-blue-grey, 800, 300, 900);
 $mixcore-accent: mat-palette($mat-lime);
-$mixcore-warn: mat-palette($mat-yellow, 600);
+$mixcore-warn: mat-palette($mat-red, 600);
 
 $mixcore-theme: mat-light-theme($mixcore-primary, $mixcore-accent, $mixcore-warn);

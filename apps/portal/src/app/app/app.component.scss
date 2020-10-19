@@ -13,7 +13,12 @@
 
     .hamburger-menu
     {
-      font-size: 16px;
+      margin-right: 10px;
+
+      fa-icon{
+        font-size: 16px;
+        color: gray;
+      }
     }
 
     .nav-button {
@@ -333,5 +338,15 @@ mat-sidenav {
 
   .mat-nav-list {
     padding-top: 0;
+    mat-icon
+    {
+      margin-left: 10px;
+      margin-right: 20px;
+      color: gray;
+    }
+    .mat-list-base .mat-list-item
+    {
+      font-weight: bold !important;
+    }
   }
 }
