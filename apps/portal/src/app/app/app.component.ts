@@ -36,10 +36,13 @@ export class AppComponent implements OnInit {
   languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn', 'he'];
   navigation = [
     { link: 'portal/dashboard', label: 'mixcore.menu.dashboard', icon: "dashboard" },
+    { link: 'portal/navigation', label: 'mixcore.menu.navigation', icon: "account_tree" },
     { link: 'portal/posts', label: 'mixcore.menu.posts', icon: "create" },
     { link: 'pages', label: 'mixcore.menu.pages', icon: "article" },
     { link: 'modules', label: 'mixcore.menu.modules', icon: "developer_board" },
     { link: 'databases', label: 'mixcore.menu.databases', icon: "storage" },
+    { link: 'Categories', label: 'mixcore.menu.categories', icon: "category" },
+    { link: 'Tags', label: 'mixcore.menu.tags', icon: "loyalty" },
     // { link: 'about', label: 'mixcore.menu.about', icon: "dashboard" },
     // { link: 'feature-list', label: 'mixcore.menu.features', icon: "dashboard" },
     { link: 'examples', label: 'mixcore.menu.examples', icon: "dashboard" }
