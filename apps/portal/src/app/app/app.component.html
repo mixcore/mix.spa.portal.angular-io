@@ -10,7 +10,7 @@
           <fa-icon icon="bars"></fa-icon>
         </button>
 
-        <span routerLink="" class="branding spacer center d-inline d-sm-none">
+        <span routerLink="" class="branding spacer left d-inline d-sm-none">
           <img [src]="logo" [alt]="logo"/>
         </span>
         <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none"><img [src]="logo" [alt]="logo"/> {{ 'mixcore.title.short' | translate }}</span>
@@ -119,14 +119,14 @@
       </div> -->
       <div class="row">
         <div class="col-12 signature">
-          <span class="year">{{year}}</span> - Made by human on Earth
+          Made by human on Earth <mat-icon>heart</mat-icon>
           <br class="d-block d-sm-none">
-          <a [matTooltip]="'mixcore.footer.changelog' | translate"
+          <!--a [matTooltip]="'mixcore.footer.changelog' | translate"
              matTooltipPosition="before"
              href="https://github.com/mixcore/mix.core/blob/master/CHANGELOG.md">
             <fa-icon icon="rocket"></fa-icon>
             {{version}} <span *ngIf="!isProd">[{{envName}}]</span>
-          </a>
+          </a-->
         </div>
       </div>
     </div>

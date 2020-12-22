@@ -1,4 +1,25 @@
 @import '../../styles-variables';
+@import '~@angular/material/theming';
+@mixin mat-icon-color($config-or-theme) {
+  // Extract the color configuration in case a theme has been passed.
+  // This allows consumers to either pass a theme object or a color configuration.
+  $config: mat-get-color-config($config-or-theme);
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+
+
+  mat-sidenav {
+
+    .mat-nav-list {
+      mat-icon {
+        color: mat-color($primary);
+      }
+
+    }
+  }
+
+}
 
 .theme-wrapper {
   height: 100%;
@@ -17,7 +38,7 @@
 
       fa-icon{
         font-size: 16px;
-        color: gray;
+        // color: mat-color($accent);
       }
     }
 
@@ -87,8 +108,12 @@
     .footer {
       flex: 0 0 auto;
       padding: 0 15px;
-      margin-top: 50px;
-      text-align: center;
+      /* margin-top: 100px; */
+      text-align: right;
+      position: fixed;
+      bottom: 0;
+      right: 20px;
+      color: gray;
 
       .row {
         padding: 10px 0;
@@ -342,7 +367,7 @@ mat-sidenav {
     {
       margin-left: 10px;
       margin-right: 20px;
-      color: gray;
+      // color: gray;
     }
     .mat-list-base .mat-list-item
     {
