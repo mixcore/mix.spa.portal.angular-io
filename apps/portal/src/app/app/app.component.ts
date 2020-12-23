@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   version = env.versions.app;
   year = new Date().getFullYear();
   logo = require('../../assets/logo.png').default;
-  languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br', 'zh-cn', 'he'];
+  languages = ['en', 'de']; // , 'sk', 'fr', 'es', 'pt-br', 'zh-cn', 'he'
   navigation = [
     { link: 'portal/dashboard', label: 'mixcore.menu.dashboard', icon: "dashboard" },
     { link: 'portal/navigation', label: 'mixcore.menu.navigation', icon: "account_tree" },
