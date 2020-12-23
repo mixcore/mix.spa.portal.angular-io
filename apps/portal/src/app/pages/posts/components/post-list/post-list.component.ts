@@ -7,18 +7,14 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
 
-import {
-  routeAnimations,
-  ROUTE_ANIMATIONS_ELEMENTS,
-  selectIsAuthenticated
-} from '@mixcore/core';
-
 export interface PeriodicElement {
   name: string;
   position: number;
   weight: number;
   symbol: string;
 }
+
+
 const ELEMENT_DATA: PeriodicElement[] = [
   { position: 1, name: "Hydrogen", weight: 1.0079, symbol: "H" },
   { position: 2, name: "Helium", weight: 4.0026, symbol: "He" },
@@ -32,30 +28,35 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 10, name: "Neon", weight: 20.1797, symbol: "Ne" }
 ];
 
-
 @Component({
-  selector: 'mixcore-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  selector: 'mixcore-post-list',
+  templateUrl: './post-list.component.html',
+  styleUrls: ['./post-list.component.scss']
 })
-export class PostsComponent implements OnInit {
-  
-  routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
+export class PostListComponent implements OnInit {
   isAuthenticated$: Observable<boolean>;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  
-  subNav = [
-    { link: '/portal/posts', label: 'mixcore.portal.posts.list', icon: 'view_list' },
-    { link: '/portal/posts/post-create', label: 'mixcore.portal.posts.create', icon: 'edit' }
-  ];
+  constructor() { }
 
-  constructor() {}
+
 
   ngOnInit(): void {
-    // this.isAuthenticated$ = this.store.pipe(select(selectIsAuthenticated));
   }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+
+  drop(event: CdkDragDrop<PeriodicElement[]>) {
+    moveItemInArray(this.dataSource.data, event.previousIndex, event.currentIndex);
+    this.dataSource.data = [...this.dataSource.data];
+    console.log(event.container.data);
+    // this.dataSource = event.container.data;
+  }
+
 }
