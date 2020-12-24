@@ -1,15 +1,11 @@
 <nav mat-tab-nav-bar class="d-none d-sm-flex">
-  <a mat-tab-link
-     *ngFor="let e of subNav"
-     [routerLink]="e.link"
-     routerLinkActive #rla="routerLinkActive"
-     [routerLinkActiveOptions]="{exact: true}"
-     [active]="rla.isActive"
-     [disabled]="e.auth && !(isAuthenticated$ | async)"> <mat-icon>{{e.icon}}</mat-icon>&nbsp;{{e.label | translate}}
+  <a mat-tab-link *ngFor="let e of subNav" [routerLink]="e.link" routerLinkActive #rla="routerLinkActive"
+    [routerLinkActiveOptions]="{exact: true}" [active]="rla.isActive"
+    [disabled]="e.auth && !(isAuthenticated$ | async)">
+    <mat-icon>{{e.icon}}</mat-icon>&nbsp;{{e.label | translate}}
   </a>
 </nav>
 
-<div style="height: 100%;">
-  <router-outlet #o="outlet"></router-outlet>
+<div class="body-section">
+  <router-outlet></router-outlet>
 </div>
-
