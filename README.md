@@ -5,9 +5,11 @@
 - SignalR
 
 # Priorities
+```
 - JWT authentication (login)
 - Global Wrapper App (Global dashboard)
-- 
+
+
 - CMS App / Dashboard
 - CMS App / Posts: List all post
 - CMS App / Posts / Create: Create new post
@@ -19,6 +21,7 @@
 - CMS App / Users / Staff
 - CMS App / Setting
 
+
 - Blog App / Dashboard
 - Blog App / Posts: List all posts
 - Blog App / Posts / Create: Create new post
@@ -28,6 +31,7 @@
 - Blog App / Users / Co-author
 - Blog App / Setting
 
+
 - Theme App / Dashboard
 - Theme App / Themes: List all theme
 - Theme App / Themes / Create: Create new theme
@@ -35,3 +39,4 @@
 - Theme App / Themes / [themeId] / Templates: List all template
 - Theme App / Themes / [themeId] / Templates / Create: Create new template
 - Theme App / Themes / [themeId] / Templates / Edit / [templateId]: Edit template
+```
