@@ -40,3 +40,6 @@
 - Theme App / Themes / [themeId] / Templates / Create: Create new template
 - Theme App / Themes / [themeId] / Templates / Edit / [templateId]: Edit template
 ```
+
+![image](https://user-images.githubusercontent.com/3785721/114075605-ea362000-98cf-11eb-834a-7ad36c51afa0.png)
+
