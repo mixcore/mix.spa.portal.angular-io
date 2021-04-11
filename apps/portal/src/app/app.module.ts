@@ -6,6 +6,13 @@ import { CoreModule } from '@mixcore/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
+import { HeaderComponent } from './components/header/header.component';
+
+// carbon-components-angular default imports
+import { UIShellModule, IconModule } from 'carbon-components-angular';
+import Notification16 from '@carbon/icons/es/notification/16';
+import UserAvatar16 from '@carbon/icons/es/user--avatar/16';
+import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
 
 @NgModule({
   imports: [
@@ -17,9 +24,22 @@ import { AppComponent } from './app/app.component';
     CoreModule,
 
     // app
-    AppRoutingModule
+    AppRoutingModule,
+
+    // carbon
+    UIShellModule,
+    IconModule
   ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, HeaderComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(protected iconService: IconService) {
+    iconService.registerAll([
+      Notification16,
+      UserAvatar16,
+      AppSwitcher16
+    ]);
+  }
+}
+

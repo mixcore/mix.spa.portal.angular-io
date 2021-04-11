@@ -14,6 +14,11 @@ import { SharedModule } from '@mixcore/shared';
 
 import { AppComponent } from './app.component';
 
+import Notification16 from '@carbon/icons/es/notification/16';
+import UserAvatar16 from '@carbon/icons/es/user--avatar/16';
+import AppSwitcher16 from '@carbon/icons/es/app-switcher/16';
+import { HeaderComponent } from './components/header/header.component';
+
 describe('AppComponent', () => {
   let store: MockStore;
 
@@ -26,7 +31,7 @@ describe('AppComponent', () => {
         TranslateModule.forRoot()
       ],
       providers: [provideMockStore()],
-      declarations: [AppComponent]
+      declarations: [AppComponent, HeaderComponent]
     }).compileComponents();
 
     store = TestBed.inject(MockStore);
