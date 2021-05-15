@@ -33,6 +33,7 @@ jobs:
       - name: copy files to docs folder
         run: |
           # cp -a ${GITHUB_WORKSPACE}/dist/apps/mixcore-portal/. ${GITHUB_WORKSPACE}/docs/
+          cp -a ${GITHUB_WORKSPACE}/CNAME ${GITHUB_WORKSPACE}/docs/
         env:
           CI: true
       - name: Commit files
