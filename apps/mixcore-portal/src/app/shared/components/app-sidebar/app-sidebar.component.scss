@@ -43,6 +43,11 @@
       width: 135px;
       height: 30px;
       background-color: var(--mix-logo-color);
+      background-image: linear-gradient(
+        310deg,
+        var(--secondary-gradient-color),
+        var(--primary-gradient-color)
+      );
       -webkit-mask: url(/assets/logos/mixcore-logo-green.svg) no-repeat;
       mask: url(/assets/logos/mixcore-logo-green.svg) no-repeat;
     }
