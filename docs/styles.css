@@ -4,6 +4,8 @@
 
 /* You can add global styles to this file, and also import other style files */
 :root {
+  --primary-gradient-color: #ff0080;
+  --secondary-gradient-color: #7928ca;
   --mix-logo-color: #40e0d0;
   --header-bg-color: #f0f2f5;
   --sidebar-bg-color: #f0f2f5;
