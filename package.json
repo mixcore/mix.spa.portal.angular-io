@@ -8,6 +8,7 @@
     "nx": "nx",
     "start": "ng serve",
     "build:prod": "ng build:prod",
+    "build:gh-page": "ng build:prod --output-path docs",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
