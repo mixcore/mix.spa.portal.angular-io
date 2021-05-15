@@ -23,8 +23,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install, build
         run: |
-          npm i
-          npm run build
+          npm install --global yarn
+          # npm i
+          # npm run build
+          yarn install
+          yarn upgrade
+          yarn build
         env:
           CI: true
       - name: copy files to docs folder
