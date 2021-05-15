@@ -24,6 +24,8 @@ jobs:
       - name: npm install, build
         run: |
           # npm install --global yarn
+          npm i nx
+          npm i @angular/cli
           npm install
           ng build --output-path docs
         env:
